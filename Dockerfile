@@ -21,7 +21,7 @@ RUN  \
   && rm -rf /var/lib/apt/lists/*
 
 ARG idea_source=https://download-cf.jetbrains.com/idea/ideaIU-2018.1.tar.gz
-ARG idea_local_dir=.IdeaIU2018.1
+ARG idea_local_dir=.IntelliJIdea2018.1
 
 RUN mkdir /opt/idea
 WORKDIR /opt/idea
