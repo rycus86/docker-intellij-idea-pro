@@ -21,7 +21,7 @@ Docker Hub Page: https://hub.docker.com/r/rycus86/intellij-idea-pro/
 
 You'll still need a license to use the application!
 
-The IDE will have access to Oracle Java JDK 8 and to Git as well.
+The IDE will have access to AdoptOpenJDK 8 and to Git as well.
 Project folders need to be mounted like `-v ~/Project:/home/developer/Project`.
 The actual name can be anything - I used something random to be able to start multiple instances if needed.
 You might want to consider using `--network=host` if you're running servers from the IDE.
