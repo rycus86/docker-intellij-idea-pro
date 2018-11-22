@@ -9,8 +9,8 @@ RUN  \
   libfontconfig1 \
   && rm -rf /var/lib/apt/lists/*
 
-ARG idea_source=https://download.jetbrains.com/idea/ideaIU-2018.2.6.tar.gz
-ARG idea_local_dir=.IntelliJIdea2018.2
+ARG idea_source=https://download.jetbrains.com/idea/ideaIU-2018.3.tar.gz
+ARG idea_local_dir=.IntelliJIdea2018.3
 
 RUN mkdir /opt/idea
 WORKDIR /opt/idea
