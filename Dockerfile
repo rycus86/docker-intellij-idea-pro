@@ -4,13 +4,13 @@ LABEL maintainer "Viktor Adam <rycus86@gmail.com>"
 
 RUN  \
   apt-get update && apt-get install --no-install-recommends -y \
-  gcc git openssh-client \
+  gcc git openssh-client less \
   libxtst-dev libxext-dev libxrender-dev libfreetype6-dev \
-  libfontconfig1 \
+  libfontconfig1 libgtk2.0-0 libxslt1.1 libxxf86vm1 \
   && rm -rf /var/lib/apt/lists/* \
   && useradd -ms /bin/bash developer
 
-ARG idea_source=https://download.jetbrains.com/idea/ideaIU-191.6183.20.tar.gz
+ARG idea_source=https://download.jetbrains.com/idea/ideaIU-191.6183.62.tar.gz
 ARG idea_local_dir=.IntelliJIdea2019.1
 
 WORKDIR /opt/idea
