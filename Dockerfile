@@ -10,7 +10,7 @@ RUN  \
   && rm -rf /var/lib/apt/lists/* \
   && useradd -ms /bin/bash developer
 
-ARG idea_source=https://download.jetbrains.com/idea/ideaIU-2019.1.1.tar.gz
+ARG idea_source=https://download.jetbrains.com/idea/ideaIU-191.7141.2.tar.gz
 ARG idea_local_dir=.IntelliJIdea2019.1
 
 WORKDIR /opt/idea
