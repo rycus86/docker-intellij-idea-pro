@@ -13,10 +13,30 @@ docker run --rm \
   -v ~/.Idea.share:/home/developer/.local/share/JetBrains \
   -v ~/Project:/home/developer/Project \
   --name idea-$(head -c 4 /dev/urandom | xxd -p)-$(date +'%Y%m%d-%H%M%S') \
-rycus86/intellij-idea-pro:latest
+rycus86/intellij-idea-pro:${IDE_VERSION}
 ```
 
 Docker Hub Page: https://hub.docker.com/r/rycus86/intellij-idea-pro/
+([available versions](https://hub.docker.com/r/rycus86/intellij-idea-pro/tags))
+
+### OS X instructions
+
+1. Install XQuartz from https://www.xquartz.org/releases/
+2. Configure `Allow connections from network clients` in the settings
+    - Restart the system (needed only once when this is enabled)
+3. Run `xhost +localhost` in a terminal to allow connecting to X11 over the TCP socket
+4. Use `-e DISPLAY=host.docker.internal:0` for passing the `${DISPLAY}` environment
+
+#### For Windows hosts (simplified):
+
+```
+docker.exe run --rm -d ^
+     --name intellij-idea-pro ^
+     -e DISPLAY=YOUR_IP_ADDRESS:0.0 ^
+     -v %TEMP%\.X11-unix:/tmp/.X11-unix ^
+     -v %USERPROFILE%\intellij-idea:/home/developer ^
+     rycus86/intellij-idea-pro:%IDE_VERSION%
+```
 
 ### Notes
 
